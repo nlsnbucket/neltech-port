@@ -44,7 +44,7 @@ const Home: NextPage = () => {
 
       <PublicLayout>
         <main className="pt-14 bg-comp-home bg-no-repeat bg-bottom text-white">
-          <section className="bg-hero-home bg-no-repeat h-[37.5rem] bg-right px-6">
+          <section className="bg-hero-home bg-no-repeat h-[37.5rem] bg-right px-24">
             <h1 className="w-72 text-6xl mb-20">Lorem Ipsum</h1>
 
             <p className="w-[29rem] text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie, diam nec tincidunt vehicula, justo tortor accumsan diam, vel consectetur Fusce ac elementum nisl. Nulla facilisi.</p>
