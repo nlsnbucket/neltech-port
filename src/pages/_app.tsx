@@ -5,7 +5,7 @@ import '../styles/globals.css'
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <Component {...pageProps} />
+      <Component className="w-full" {...pageProps} />
     </>
   )
 }

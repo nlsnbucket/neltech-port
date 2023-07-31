@@ -8,14 +8,15 @@ interface ArticleProps {
   textFirst?: boolean
 }
 
-export const Article = ({imageData, alt="", title, content, textFirst=false}: ArticleProps) => {
+export const Article = ({ imageData, alt = "", title, content, textFirst = false }: ArticleProps) => {
   return (
-    <article data-text-first={textFirst} className="flex gap-32 data-[text-first=true]:flex-row-reverse">
-      <Image src={imageData} alt={alt} width={250} height={250}/>
-
-      <div>
-        <h2 className="text-4xl mb-7">{title}</h2>
-        <p className="text-3xl">{content}</p>
+    <article
+      className={`max-w-full flex ${textFirst ? 'flex-row-reverse' : ''} w-full m-auto max-w-full flex-wrap md:flex-nowrap justify-between md:gap-16`}
+    >
+      <Image className="max-w-full w-200 md:w-50" src={imageData} alt={alt} width={200} height={200} />
+      <div className="w-full">
+        <h2 className="">{title}</h2>
+        <p className="md:w-600">{content}</p>
       </div>
     </article>
   )

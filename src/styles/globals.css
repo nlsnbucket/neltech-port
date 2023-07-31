@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
   background: linear-gradient(to right, rgb(0, 12, 73), rgba(2, 69, 146, 0.767));
+  background-size: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
 }
+
+
+html {
+
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+ * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+ }

@@ -45,7 +45,7 @@ const Home: NextPage = () => {
       <PublicLayout>
         <main className="pt-14 bg-comp-home bg-no-repeat bg-bottom text-white max-w-full w-[600px] mx-auto" >
             <div>
-                <div className="p-8 border-2 rounded flex items-center gap-4">
+                <div className="p-6 border-2 rounded flex items-center gap-4 max-w-[300px] m-auto">
                     <img src="github.svg" width="50"></img>
                     <h1>Entrar com o github</h1>
                 </div>
