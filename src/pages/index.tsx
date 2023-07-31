@@ -17,6 +17,10 @@ import { Textarea } from "../components/Form/Textarea";
 import Proposition from '@/public/pedido.png'
 import Review from '@/public/analise.png'
 import Budget from '@/public/orcamento.png'
+import Image, { StaticImageData } from 'next/image'
+
+
+
 
 const NewProjectFormSchema = z.object({
   name: z.string().min(3, 'Digite o seu nome'),
@@ -36,22 +40,27 @@ const Home: NextPage = () => {
     console.log(data)
   }
 
-  return(
+  return (
     <>
       <Head>
         <title>Neltech - Home</title>
       </Head>
 
-      <PublicLayout>
-        <main className="pt-14 bg-comp-home bg-no-repeat bg-bottom text-white">
-          <section className="bg-hero-home bg-no-repeat h-[37.5rem] bg-right px-24">
-            <h1 className="w-72 text-6xl mb-20">Lorem Ipsum</h1>
+      <PublicLayout className="mt-24">
+        <main className="pt-14 bg-comp-home bg-no-repeat bg-bottom text-white mx-auto max-w-full  px-4 md: pl-12 w-[1400px] px-10px ">
+          <section className="flex items-center  w-full justify-between flex-wrap" style={{ minHeight: "calc(100vh - 210px)" }}>
+            <div className="max-w-full w-md-full md:w-[580px] ">
+              <h1 className="text-4xl mb-10">Lorem Ipsum</h1>
+              <p className="text-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis veniam autem laudantium pariatur, reprehenderit, voluptate dolores corporis veritatis voluptas nesciunt ducimus quod commodi! Quas quod accusantium consequuntur est et!
+              </p>
+            </div>
 
-            <p className="w-[29rem] text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie, diam nec tincidunt vehicula, justo tortor accumsan diam, vel consectetur Fusce ac elementum nisl. Nulla facilisi.</p>
+            <Image className="hidden  md:w-[530px] hidden lg:block" src="/backg.png" alt="" width={1000} height={1000} />
           </section>
 
-          <section className="flex flex-col gap-24 px-24 pt-[4.5rem]">
-            <Article 
+          <section className="flex flex-col gap-24 md:px-8 pt-[4.5rem] flex-wrap ">
+            <Article
               imageData={Proposition}
               alt="Mão interagindo com um dispositivo que apresenta um grafico"
               title="Pedido"
@@ -66,7 +75,7 @@ const Home: NextPage = () => {
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu."
             />
 
-            <Article 
+            <Article
               imageData={Budget}
               title="Orçamento e Contato"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu."
@@ -74,13 +83,13 @@ const Home: NextPage = () => {
           </section>
 
           <section className="pt-48 pb-[28rem]">
-            <h2 className="mx-auto w-max text-6xl mb-8">Entre em Contato</h2>
-            <div className="mx-auto bg-gray-300 w-[45rem] mt-10 flex flex-col gap-4 mb-4 px-12 py-7 rounded-lg">
+            <h2 className="mx-auto mb-8">Entre em Contato</h2>
+            <div className="mx-auto bg-gray-300 w-[600px] max-w-full mt-10 flex flex-col gap-4 mb-4 px-12 py-7 rounded-lg">
               <form onSubmit={handleSubmit(handleNewProject)} className="grid">
-                <Input label="Nome" {...register('name')}/>
-                <MaskedInput label="Telefone" mask="(99) 99999-9999" {...register('phone')}/>
-                <Textarea label="Descrição do projeto" {...register('description')}/>
-                <Textarea label="Motivação" {...register('motivation')}/>
+                <Input label="Nome" {...register('name')} />
+                <MaskedInput label="Telefone" mask="(99) 99999-9999" {...register('phone')} />
+                <Textarea label="Descrição do projeto" {...register('description')} />
+                <Textarea label="Motivação" {...register('motivation')} />
 
                 <button type="submit" className="bg-[#022C54] h-14 w-52 rounded-md mt-10 justify-self-center">Enviar</button>
               </form>
