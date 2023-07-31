@@ -8,7 +8,7 @@ import HamburgerMenu from "./HamburgerMenu"
 
 export const Header = () => {
   return (
-    <header className="flex items-center text-white max-w-full w-full py-4 px-6 fixed top-0 bg-[#00000029] ">
+    <header className="flex items-center text-white max-w-full w-full py-4 px-6 fixed top-0 bg-[#00000099] ">
       <Image src={"/logo.png"} alt="" height={60} width={200} />
       <nav className="grid grid-flow-col gap-20 md:flex md:flex-wrap md:justify-end md:w-full mr-20 hidden md:block">
         <Link href="/">Home</Link>
