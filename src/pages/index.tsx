@@ -45,10 +45,11 @@ const Home: NextPage = () => {
       <Head>
         <title>Neltech - Home</title>
       </Head>
-
-      <PublicLayout className="mt-24">
-        <main className="pt-14 bg-comp-home bg-no-repeat bg-bottom text-white mx-auto max-w-full  px-4 md: pl-12 w-[1400px] px-10px ">
-          <section className="flex items-center  w-full justify-between flex-wrap" style={{ minHeight: "calc(100vh - 210px)" }}>
+      
+      <PublicLayout className="mt-[120px]">
+       
+        <main className="bg-comp-home bg-no-repeat bg-bottom text-white mx-auto max-w-full  px-8 lg:px-12  w-[1400px] px-10px ">
+          <section className="flex items-center  w-full justify-between flex-wrap" style={{ minHeight: "calc(100vh - 210px)" }} >
             <div className="max-w-full w-md-full md:w-[580px] ">
               <h1 className="text-4xl mb-10">Lorem Ipsum</h1>
               <p className="text-xl">
@@ -59,14 +60,17 @@ const Home: NextPage = () => {
             <Image className="hidden  md:w-[530px] hidden lg:block" src="/backg.png" alt="" width={1000} height={1000} />
           </section>
 
-          <section className="flex flex-col gap-24 md:px-8 pt-[4.5rem] flex-wrap ">
+          <section  className="flex flex-col gap-24 md:px-8 pt-[4.5rem] flex-wrap ">
+            <section  id="article-pedido">
             <Article
-              imageData={Proposition}
-              alt="Mão interagindo com um dispositivo que apresenta um grafico"
-              title="Pedido"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu."
-            />
-
+             
+             imageData={Proposition}
+             alt="Mão interagindo com um dispositivo que apresenta um grafico"
+             title="Pedido"
+             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu."
+           />
+            </section>
+            <section  id="article-fluxo">
             <Article
               textFirst
               imageData={Review}
@@ -74,6 +78,10 @@ const Home: NextPage = () => {
               alt="Papel com uma lista representando etapas de uma analise"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet, libero eu laoreet mollis, arcu."
             />
+            </section>
+            
+
+         
 
             <Article
               imageData={Budget}
@@ -82,18 +90,29 @@ const Home: NextPage = () => {
             />
           </section>
 
-          <section className="pt-48 pb-[28rem]">
-            <h2 className="mx-auto mb-8">Entre em Contato</h2>
-            <div className="mx-auto bg-gray-300 w-[600px] max-w-full mt-10 flex flex-col gap-4 mb-4 px-12 py-7 rounded-lg">
-              <form onSubmit={handleSubmit(handleNewProject)} className="grid">
-                <Input label="Nome" {...register('name')} />
-                <MaskedInput label="Telefone" mask="(99) 99999-9999" {...register('phone')} />
-                <Textarea label="Descrição do projeto" {...register('description')} />
-                <Textarea label="Motivação" {...register('motivation')} />
-
-                <button type="submit" className="bg-[#022C54] h-14 w-52 rounded-md mt-10 justify-self-center">Enviar</button>
-              </form>
+          <section className="pt-48 pb-[28rem] flex justify-center lg:justify-between flex-wrap items-center m-auto">
+            <div>
+              <h2 className="mx-auto mb-8 text-left">Entre em Contato</h2>
+              <p className="max-w-full md:max-w-[400px]">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores quasi, totam rem numquam obcaecati doloremque, ipsa voluptate quibusdam explicabo sit quis incidunt magnam quae velit tempore earum iste beatae hic?
+                <br></br><br></br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam quidem earum consectetur fuga suscipit harum, odit reprehenderit accusantium quibusdam dolore possimus laudantium! Modi dolore quam aut architecto illum beatae.
+              </p>
             </div>
+
+
+            <div className="max-w-full px-1">
+              <div className="mx-auto bg-gray-300 w-[350px] max-w-full mt-8 flex flex-col gap-2 md:gap-4 lg:gap-4 mb-4 px-6 py-7 rounded-lg">
+                <form onSubmit={handleSubmit(handleNewProject)} className="grid">
+                  <Input label="Nome" {...register('name')} />
+                  <MaskedInput label="Telefone" mask="(99) 99999-9999" {...register('phone')} />
+                  <Textarea label="Descrição do projeto" {...register('description')} />
+                  <Textarea label="Motivação" {...register('motivation')} />
+                  <button type="submit" className="bg-[#022C54] rounded-md  py-2 mt-4 shadow">Enviar</button>
+                </form>
+              </div>
+            </div>
+
           </section>
         </main>
       </PublicLayout>
