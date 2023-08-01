@@ -1,5 +1,14 @@
 import { useState } from "react"; // import state
 
+
+
+
+
+
+
+
+
+
 export default function Header(props: any) {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
@@ -15,7 +24,7 @@ export default function Header(props: any) {
             <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
             <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
           </div>
-
+      
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div
               className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
