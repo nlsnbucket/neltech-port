@@ -17,7 +17,7 @@ import { useEffect } from "react";
 
 
 
-
+//todo neltech client_id cf0189d7c923b324ca0c
 
 function redirectToGithub() {
   const GITHUB_AUTH_URL = 'https://github.com/login/oauth/authorize';
