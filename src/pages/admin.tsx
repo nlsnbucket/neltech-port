@@ -58,7 +58,7 @@ const Home: NextPage = () => {
                 <title>Neltech - Home</title>
             </Head>
             <main className="bg-comp-home bg-no-repeat bg-bottom text-white mx-auto max-w-full  px-8 lg:px-12  w-[1400px] px-10px h-full ">
-                <div className="w-full h-full flex items-center justify-center mt-[200px] flex-col w-[400px] m-auto max-w-full bg-white p-12 text-black shadow-2xl">
+                <div className="w-full h-full flex items-center justify-center mt-[200px] flex-col w-[400px] m-auto max-w-full bg-white p-8 text-black shadow-2xl">
 
                     <div className="w-[450px] max-w-full">
                         <h1 className="font-bold">Bem vindo(a)</h1>
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
                     </div>
 
                     <AuthButton className="mt-4 flex text-black items-center bg-red gap-6 bg-white w-full rounded p-1 pr-2 font-bold shadow-2xl border border-gray-500" onClick={clickAuth}>
-                        <Image src="/github.svg" width="48" height="48" alt="" className="color-black"></Image>
+                        <Image src="/github.svg" width="32" height="32" alt="" className="color-black"></Image>
                         Entrar com GitHub
                     </AuthButton>
 
