@@ -10,7 +10,7 @@ interface ArticleProps {
 
 export const Article = ({imageData, alt="", title, content, textFirst=false}: ArticleProps) => {
   return (
-    <article data-text-first={textFirst} className="flex gap-32 data-[text-first=true]:flex-row-reverse">
+    <article data-text-first={textFirst} className="flex gap-32 data-[text-first=true]:flex-row-reverse flex-wrap">
       <Image src={imageData} alt={alt} width={250} height={250}/>
 
       <div>
