@@ -57,7 +57,7 @@ const Home: NextPage = () => {
             <Head>
                 <title>Neltech - Home</title>
             </Head>
-            <main className="bg-comp-home bg-no-repeat bg-bottom text-white mx-auto max-w-full  px-8 lg:px-12  w-[1400px] px-10px h-full ">
+            <main className="bg-comp-home bg-no-repeat bg-bottom text-white mx-auto max-w-full  px-8 lg:px-12  w-[500px] px-10px h-full  ">
                 <div className="w-full h-full flex items-center justify-center mt-[200px] flex-col w-[400px] m-auto max-w-full bg-white p-8 text-black shadow-2xl">
 
                     <div className="w-[450px] max-w-full">
